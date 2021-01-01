@@ -18,11 +18,20 @@ header {
 }
 header h1{
   color: rgb(84, 243, 52);
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 form{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+form input{
+  padding: 10px;
+  font-size: 1rem;
+  color: rgb(30, 31, 30);
+}
+form input:focus,
+form input:valid{
+  outline: none;
 }
