@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+header {
+  
+}
