@@ -16,6 +16,9 @@ header {
   align-items: center;
   justify-content: center;
 }
+ul{
+  list-style-type: none;
+}
 header h1{
   color: rgb(84, 243, 52);
   font-size: 3rem;
