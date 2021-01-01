@@ -98,6 +98,7 @@ form input:valid{
   align-items: center;
   justify-content: center;
   padding: .5rem;
+  border: 1px solid #fff;
 }
 .todo .complete-btn,
 .todo .delete-btn{
@@ -111,7 +112,7 @@ form input:valid{
   outline: none;
 }
 .todo .complete-btn{
-  background: rgb(104, 247, 104);
+  background: rgb(84, 243, 52);
 }
 .todo .delete-btn{
   background: rgb(248, 60, 60);
