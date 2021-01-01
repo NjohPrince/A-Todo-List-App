@@ -40,8 +40,31 @@ form input:valid{
   padding: 10px;
   border: 1px solid rgb(84, 243, 52);
   background: rgb(84, 243, 52);
+  transition: all .3s ease-in-out;
+}
+.todo-button:hover{
+  background: rgb(79, 77, 241);
+  border: 1px solid rgb(79, 77, 241);
 }
 .todo-button .plus-square{
   color: #fff;
   font-size: 1rem;
+}
+.select{
+  position: relative;
+}
+.select .filter-todo{
+  padding: 10px;
+  font-size: 1rem;
+  outline: none;
+  margin-left: 1rem;
+}
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background: #ff6f47;
+  pointer-events: none;
 }
