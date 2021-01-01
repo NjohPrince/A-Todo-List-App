@@ -23,6 +23,7 @@ header h1{
 form{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -58,6 +59,7 @@ form input:valid{
   font-size: 1rem;
   outline: none;
   margin-left: 1rem;
+  width: 195px;
 }
 .select::after{
   content: "\25BC";
@@ -67,4 +69,6 @@ form input:valid{
   cursor: pointer;
   background: #ff6f47;
   pointer-events: none;
+  padding: 10px;
+  font-size: 1rem;
 }

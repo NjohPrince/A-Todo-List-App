@@ -1,9 +1,12 @@
 import React from 'react';
 
 const Form = () => {
+    const inputTextHandler = (e) => {
+        console.log(e.target.value);
+    }
     return (
       <form>
-        <input type="text" className="todo-input" placeholder="Add To-Do Item" />
+        <input onChange={ inputTextHandler } type="text" className="todo-input" placeholder="Add To-Do Item" />
         <button className="todo-button" type="submit">
           <i className="plus-square">+</i>
         </button>
