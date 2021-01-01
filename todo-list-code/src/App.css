@@ -30,8 +30,18 @@ form input{
   padding: 10px;
   font-size: 1rem;
   color: rgb(30, 31, 30);
+  border: 1px solid rgb(84, 243, 52);
 }
 form input:focus,
 form input:valid{
   outline: none;
+}
+.todo-button{
+  padding: 10px;
+  border: 1px solid rgb(84, 243, 52);
+  background: rgb(84, 243, 52);
+}
+.todo-button .plus-square{
+  color: #fff;
+  font-size: 1rem;
 }
