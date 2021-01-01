@@ -75,3 +75,44 @@ form input:valid{
   padding: 10px;
   font-size: 1rem;
 }
+.todo-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-container .todo-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.todo{
+  display: flex;
+  margin-bottom: .5rem;
+}
+.todo .todo-item{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+}
+.todo .complete-btn,
+.todo .delete-btn{
+  border: none;
+  padding: .5rem;
+  font-weight: bold;
+}
+.todo .complete-btn:focus,
+.todo .delete-btn:focus{
+  border: none;
+  outline: none;
+}
+.todo .complete-btn{
+  background: rgb(104, 247, 104);
+}
+.todo .delete-btn{
+  background: rgb(248, 60, 60);
+}
