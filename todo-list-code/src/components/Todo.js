@@ -16,9 +16,13 @@ const Todo = ({text, todo, todos, setTodos}) => {
   };
   return (
     <div className="todo">
-      <li className="todo-item">{text}</li>
-      <button onClick={completeHandler} className="complete-btn">Done</button>
-      <button onClick={deleteHandler} className="delete-btn">Delete</button>
+      <li className={`todo-item ${todo.completed ? "completed" : ''}`}>{text}</li>
+      <button onClick={completeHandler} className="complete-btn">
+        Done
+      </button>
+      <button onClick={deleteHandler} className="delete-btn">
+        Delete
+      </button>
     </div>
   );
 };
