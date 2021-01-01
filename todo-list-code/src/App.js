@@ -3,7 +3,8 @@ import './App.css';
 import Form from './components/form';
 
 function App() {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
+  const [todos, setTodos] = useState([]);
   return (
     <div>
       <header>
