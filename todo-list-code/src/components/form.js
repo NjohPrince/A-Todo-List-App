@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({inputText, todos, setTodos, setInputText}) => {
+const Form = ({inputText, todos, setTodos, setInputText, setStatus}) => {
     const inputTextHandler = (e) => {
         setInputText(e.target.value);
     }
@@ -12,7 +12,7 @@ const Form = ({inputText, todos, setTodos, setInputText}) => {
       setInputText("");
     };
     const statusHandler = (e) => {
-        console.log(e.target.value);
+        setStatus(e.target.value);
     };
     return (
       <form method="post">
