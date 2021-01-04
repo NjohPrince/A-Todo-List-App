@@ -5,8 +5,6 @@ import TodoList from './components/todo-list';
 
 function App() {
 
-  
-
   const [inputText, setInputText] = useState('');
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("All");
@@ -14,10 +12,10 @@ function App() {
 
   const filterHandler = () => {
     switch(status){
-      case 'Completed':
+      case 'completed':
         setFilteredTodos(todos.filter(todo => todo.completed === true));
         break;
-      case 'Uncompleted':
+      case 'uncompleted':
         setFilteredTodos(todos.filter(todo => todo.completed === false));
         break;
       default:
@@ -25,6 +23,12 @@ function App() {
         break;
     }
   };
+
+  useEffect(() => {
+    filterHandler();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [todos, status]);
+
   return (
     <div>
       <header>
@@ -37,7 +41,7 @@ function App() {
         setInputText={setInputText} 
         setStatus={setStatus}
       />
-      <TodoList setTodos={setTodos} todos={todos}/>
+      <TodoList setTodos={setTodos} todos={todos} filteredTodos={filteredTodos} />
     </div>
   );
 }
