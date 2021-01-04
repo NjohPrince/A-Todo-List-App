@@ -25,6 +25,11 @@ function App() {
   };
 
   useEffect(() => {
+    getLocalTodos();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); 
+
+  useEffect(() => {
     filterHandler();
     saveLocalTodos();
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -38,6 +43,13 @@ function App() {
     }
   };
 
+  const getLocalTodos = () => {
+    if(localStorage.getItem("todos") === null){
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  };
 
   return (
     <div>
