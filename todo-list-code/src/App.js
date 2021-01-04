@@ -36,18 +36,14 @@ function App() {
   }, [todos, status]);
 
   const saveLocalTodos = () => {
-    if(localStorage.getItem("todos") === null){
-      localStorage.setItem("todos", JSON.stringify([]));
-    } else {
       localStorage.setItem("todos", JSON.stringify(todos));
-    }
   };
 
   const getLocalTodos = () => {
     if(localStorage.getItem("todos") === null){
       localStorage.setItem("todos", JSON.stringify([]));
     } else {
-      localStorage.setItem("todos", JSON.stringify(todos));
+      let todoLocal = localStorage.getItem("todos", JSON.stringify(todos));
     }
   };
 
