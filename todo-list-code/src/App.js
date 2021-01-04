@@ -26,8 +26,18 @@ function App() {
 
   useEffect(() => {
     filterHandler();
+    saveLocalTodos();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [todos, status]);
+
+  const saveLocalTodos = () => {
+    if(localStorage.getItem("todos") === null){
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  };
+
 
   return (
     <div>
