@@ -12,8 +12,14 @@ function App() {
   const filterHandler = () => {
     switch(status){
       case 'Completed':
+        setFilteredTodos(todos.filter(todo => todo.completed === true));
+        break;
       case 'Uncompleted':
-      case 'All':
+        setFilteredTodos(todos.filter(todo => todo.completed === false));
+        break;
+      default:
+        setFilteredTodos(todos);
+        break;
     }
   };
   return (
